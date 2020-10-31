@@ -36,3 +36,21 @@ function imprimirNombreEdad(persona){
 }
 
 imprimirNombreEdad(adrian)
+
+//Parametros como referencia
+
+function cumpleanos(persona){
+    persona.edad += 1
+}
+
+//Al utilizar esta función lo que pasaria es que a nuestro objeto (Adrian) se veria modificado
+// el atributo edad pasaria de tener 17 a 18 y este permenaceria así. Para que esto no suceda, se utiliza ...obejto
+
+function cumpleanosCopiaObj(persona){
+    return{
+        ...persona, //parametrosAModif:
+        edad: persona.edad + 1,
+        mensaje: "Feliz cumple Adrian"
+    }
+
+}
