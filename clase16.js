@@ -62,15 +62,10 @@ var darSigno = () => tuSigno = prompt('Introduzca su signo')
 var miSigno = ''
 
 
-while(miSigno === ''){
+while(miSigno === '' || miSigno === null){
     alert('Coloque su signo')
     miSigno = darSigno()
-    if(miSigno === null){
-        while(miSigno === null){
-            alert('Coloque su signo')
-            miSigno = darSigno()
-        }
-    }
+
 }
 
 
